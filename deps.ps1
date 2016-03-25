@@ -16,10 +16,10 @@ Set-PackageSource -Name chocolatey -Trusted
 
 # system and cli
 #cinst curl #`curl` comes with GH4W
-install-package nuget.commandline
-install-package webpi
-install-package wget
-install-package wput
+Install-Package –Name nuget.commandline
+Install-Package –Name webpi
+Install-Package –Name wget
+Install-Package –Name wput
 
 # browsers
 #cinst GoogleChrome
@@ -28,14 +28,14 @@ install-package wput
 #cinst Opera
 
 # dev tools and frameworks
-install-package atom
-install-package GitHubForWindows
+Install-Package –Name 'atom'
+Install-Package –Name 'GitHubForWindows'
 #cinst hg
-install-package Fiddler4
+Install-Package –Name 'Fiddler4'
 #cinst nodejs.install
-install-package ruby
+Install-Package –Name 'ruby'
 #cinst vim
-install-package winmerge
+Install-Package –Name 'winmerge'
 
 # other
 #cinst wincommandpaste # Copy/Paste is supported natively in Win10
@@ -75,7 +75,7 @@ if (which webpicmd) {
     webpicmd /Install /AcceptEula /Products:"IISManagementConsole"
     webpicmd /Install /AcceptEula /Products:"WebSockets"
     webpicmd /Install /AcceptEula /Products:"NetFx3,NetFx4,NETFramework452,NetFx4Extended-ASPNET45,NETExtensibility,NetFxExtensibility45,ASPNET,ASPNET45"
-#    webpicmd /Install /AcceptEula /Products:"Python279"
+    #webpicmd /Install /AcceptEula /Products:"Python279"
 }
 
 
