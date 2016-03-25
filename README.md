@@ -1,18 +1,18 @@
-﻿# Jay Harris's dotfiles for Windows
+﻿# Phil Britton's Version of Jay Harris's dotfiles for Windows
 
 A collection of PowerShell files for Windows, including common application installation through `Chocolatey` and `npm`, and developer-minded Windows configuration defaults. 
 
-Are you a Mac user? Check out my [dotfiles](https://github.com/jayharris/dotfiles) repository.
+Are you a Mac user? Check out Jay's [dotfiles](https://github.com/jayharris/dotfiles) repository.
 
 ## Installation
 
 ### Using Git and the bootstrap script
 
-You can clone the repository wherever you want. (I like to keep it in `~\Projects\dotfiles-windows`.) The bootstrapper script will copy the files to your PowerShell Profile folder.
+You can clone the repository wherever you want. (I like to keep it in `~\Development\dotfiles-windows`.) The bootstrapper script will copy the files to your PowerShell Profile folder.
 
 From PowerShell:
 ```posh
-git clone https://github.com/jayharris/dotfiles-windows.git; cd dotfiles-windows; . .\bootstrap.ps1
+git clone https://github.com/philbritton/dotfiles-windows.git; cd dotfiles-windows; . .\bootstrap.ps1
 ```
 
 To update your settings, `cd` into your local `dotfiles-windows` repository within PowerShell and then:
@@ -30,7 +30,7 @@ Note: You must have your execution policy set to unrestricted (or at least in by
 To install these dotfiles from PowerShell without Git:
 
 ```bash
-iex ((new-object net.webclient).DownloadString('https://raw.github.com/jayharris/dotfiles-windows/master/setup/install.ps1'))
+iex ((new-object net.webclient).DownloadString('https://raw.github.com/philbritton/dotfiles-windows/sublime3/setup/install.ps1'))
 ```
 
 To update later on, just run that command again.
@@ -74,7 +74,7 @@ When setting up a new Windows box, you may want to install some common packages,
 .\deps.ps1
 ```
 
-> The scripts will install Chocolatey, node.js, and WebPI if necessary.
+> The scripts will install Chocolatey (Jay's version uses chocolatey directly, I'm trying to use Win10 PackageManagement), node.js, and WebPI if necessary.
 
 > **Visual Studio Extensions**  
 > Extensions will be installed into your most current version of Visual Studio. You can also install additional plugins at any time via `Install-VSExtension $url`. The Url can be found on the gallery; it's the extension's `Download` link url.
