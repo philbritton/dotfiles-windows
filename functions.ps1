@@ -212,3 +212,6 @@ function Unzip-File {
     }
 }
 
+##Sublime Text 3##
+function subl { &"${Env:ProgramFiles}\Sublime Text 3\sublime_text.exe" $args }
+

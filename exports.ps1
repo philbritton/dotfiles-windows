@@ -1,6 +1,6 @@
-# Make vim the default editor
-Set-Environment "EDITOR" "gvim --nofork"
+# Make sublime the default editor
+Set-Environment "EDITOR" "subl -w"
 Set-Environment "GIT_EDITOR" $Env:EDITOR
 
 # Disable the Progress Bar
-$ProgressPreference='SilentlyContinue'
+#$ProgressPreference='SilentlyContinue'

@@ -75,4 +75,5 @@ Set-Alias unmute Set-SoundUnmute
 Set-Alias update System-Update
 
 # Set GVim as default vim
-Set-Alias vim gvim
+#Set-Alias vim gvim
+
