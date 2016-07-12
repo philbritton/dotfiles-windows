@@ -28,8 +28,8 @@ Install-Package –Name wput
 #cinst Opera
 
 # dev tools and frameworks
-Install-Package –Name 'atom'
-Install-Package –Name 'GitHubForWindows'
+#Install-Package –Name 'atom'
+#Install-Package –Name 'GitHubForWindows'
 #cinst hg
 Install-Package –Name 'Fiddler4'
 #cinst nodejs.install
@@ -42,7 +42,7 @@ Install-Package –Name 'winmerge'
 
 ### Completing PoshGit installation if installing GH4W
 #if (((choco list -lr | where {$_ -like "githubforwindows*"}) -ne $null) -and ((which git) -eq $null)) {
-    Write-Host ""
+<#    Write-Host ""
     Write-Host "You have installed GitHubForWindows but `git` was not found."
     Write-Host "In case GitHubForWindows is newly installed, execution has been"
     Write-Host "paused while you complete the installation."
@@ -61,7 +61,7 @@ Install-Package –Name 'winmerge'
         Read-Host -Prompt "After launching, close the GH4W shell and press Enter to proceed" | Out-Null
         Refresh-Environment
         . (Join-Path (Split-Path -parent $PROFILE) "profile.ps1")
-    Pop-Location
+    Pop-Location#>
 #} else {
 #    Refresh-Environment
 #}

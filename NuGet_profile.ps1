@@ -30,8 +30,8 @@ function Reinstall-Package {
 }
 
 # Wire StudioShell Functions if Exists
-if ((Get-Module -ListAvailable StudioShell) -ne $null) {
-  Import-Module StudioShell
+#if ((Get-Module -ListAvailable StudioShell) -ne $null) {
+#  Import-Module StudioShell
 
   <#
   function Reset-MultiMonitor {
@@ -49,5 +49,5 @@ if ((Get-Module -ListAvailable StudioShell) -ne $null) {
   }
   Remove-Variable $localMonitors
   #>
-}
+#}
 

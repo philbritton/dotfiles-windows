@@ -1,5 +1,5 @@
 # Configure Git
-if (Test-Path (Join-Path $env:LOCALAPPDATA "GitHub")) {
+<#if (Test-Path (Join-Path $env:LOCALAPPDATA "GitHub")) {
     Push-Location (Join-Path $env:LOCALAPPDATA "GitHub")
     . ".\shell.ps1"
     Push-Location $env:github_posh_git
@@ -24,3 +24,4 @@ if (Test-Path (Join-Path $env:LOCALAPPDATA "GitHub")) {
     Start-SshAgent -Quiet
     Pop-Location
 }
+#>

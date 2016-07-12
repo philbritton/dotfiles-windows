@@ -213,7 +213,7 @@ function Unzip-File {
 }
 
 ##Sublime Text 3##
-function subl { &"${Env:ProgramFiles}\Sublime Text 3\sub.exe" $args }
+function subl { &"${Env:ProgramFiles}\Sublime Text 3\subl.exe" $args }
 
 function OutputStatus($message){
     try {
@@ -226,12 +226,12 @@ function OutputStatus($message){
 }
 $messages = @()
 
-OutputStatus "Loading posh-git"
+<#OutputStatus "Loading posh-git"
 # Load posh-git example profile
 if(Test-Path Function:\Prompt) {Rename-Item Function:\Prompt PrePoshGitPrompt -Force}
-. 'C:\Users\PBritton\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'
+#. 'C:\tools\poshgit\dahlbyk-posh-git-19f3f2e\profile.example.ps1'
 Rename-Item Function:\Prompt PoshGitPrompt -Force
-function Prompt() {if(Test-Path Function:\PrePoshGitPrompt){++$global:poshScope; New-Item function:\script:Write-host -value "param([object] `$object, `$backgroundColor, `$foregroundColor, [switch] `$nonewline) " -Force | Out-Null;$private:p = PrePoshGitPrompt; if(--$global:poshScope -eq 0) {Remove-Item function:\Write-Host -Force}}PoshGitPrompt}
+function Prompt() {if(Test-Path Function:\PrePoshGitPrompt){++$global:poshScope; New-Item function:\script:Write-host -value "param([object] `$object, `$backgroundColor, `$foregroundColor, [switch] `$nonewline) " -Force | Out-Null;$private:p = PrePoshGitPrompt; if(--$global:poshScope -eq 0) {Remove-Item function:\Write-Host -Force}}PoshGitPrompt}#>
 
 OutputStatus "Loading Autoload"
 Import-Module C:\Users\PBritton\Documents\WindowsPowerShell\Modules\Autoload\Autoload.psm1
