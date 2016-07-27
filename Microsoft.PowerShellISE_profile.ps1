@@ -13,5 +13,3 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 # Load posh-git example profile
-
-
