@@ -1,5 +1,5 @@
-# Configure Git
-<#if (Test-Path (Join-Path $env:LOCALAPPDATA "GitHub")) {
+<# #Configure Git
+if (Test-Path (Join-Path $env:LOCALAPPDATA "GitHub")) {
     Push-Location (Join-Path $env:LOCALAPPDATA "GitHub")
     . ".\shell.ps1"
     Push-Location $env:github_posh_git
