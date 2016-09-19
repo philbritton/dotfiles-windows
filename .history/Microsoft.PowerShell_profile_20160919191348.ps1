@@ -31,5 +31,5 @@ $GitPromptSettings = New-Object PSObject -Property `
 
 # Load posh-HumpCompletion example profile
 Import-Module posh-HumpCompletion
-Import-Module oh-my-posh 
+Import-Module oh-my-posh   -
 
