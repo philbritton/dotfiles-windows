@@ -229,7 +229,7 @@ $messages = @()
 
 
 OutputStatus "Loading Autoload"
-Import-Module C:\Users\PBritton\Documents\WindowsPowerShell\Modules\Autoload\Autoload.psm1
+Import-Module Autoload
 
 OutputStatus "Loading posh-HumpCompletion"
 Import-Module posh-HumpCompletion
