@@ -6,8 +6,7 @@ if ((Test-Path "hklm:\SOFTWARE\Microsoft\VisualStudio\SxS\VS7") -or (Test-Path "
 
     $vsRegistry = Get-Item "hklm:\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\SxS\VS7" -ErrorAction SilentlyContinue
     if ($vsRegistry -eq $null) { $vsRegistry = Get-Item "hklm:\SOFTWARE\Microsoft\VisualStudio\SxS\VS7" }
-    $vsVersion  = $vsRegistry.property | Sort-Object -Descending | Select-Object -first 1
-    $vsinstall  = ForEach-Object -process {$vsRegistry.GetValue($vsVersion)}
+    $vsVersion  = $vsRegistry.property | Sort-Object {[int]$_} -Descending | Select-Object -first 1    $vsinstall  = ForEach-Object -process {$vsRegistry.GetValue($vsVersion)}
     Remove-Variable vsRegistry
 
     if ((Test-Path $vsinstall) -eq 0) {Write-Error "Unable to find Visual Studio installation"}
